@@ -1,0 +1,464 @@
+/* ============ Payment Page Base ============ */
+.payment-page {
+  background: #080808;
+  min-height: 100vh;
+  padding: 30px 15px 60px;
+  color: #FFFFFF;
+}
+
+.payment-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ============ Header ============ */
+.payment-header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.order-id-badge {
+  background: rgba(230, 57, 70, 0.1);
+  border: 1px solid rgba(230, 57, 70, 0.3);
+  color: #E63946;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 20px;
+  width: fit-content;
+  letter-spacing: 0.5px;
+}
+
+.payment-main-title {
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.payment-main-title span {
+  color: #E63946;
+}
+
+.payment-subtitle {
+  font-size: 13px;
+  color: #A1A1AA;
+  margin: 0;
+}
+
+/* ============ Error Box ============ */
+.payment-error-box {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  padding: 10px 14px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  color: #EF4444;
+}
+
+.payment-error-box button {
+  margin-left: auto;
+  background: none;
+  border: none;
+  color: #EF4444;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* ============ Currency Tabs ============ */
+.region-tabs {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.region-tab {
+  background: #121212;
+  border: 1px solid #262626;
+  color: #A1A1AA;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex: 1;
+  min-width: 120px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.region-tab:hover {
+  border-color: #3F3F46;
+  color: #FFFFFF;
+}
+
+.region-tab.active {
+  background: rgba(230, 57, 70, 0.1);
+  border-color: #E63946;
+  color: #FFFFFF;
+  box-shadow: 0 0 20px rgba(230, 57, 70, 0.2);
+}
+
+/* ============ Grid Layout ============ */
+.payment-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.section-heading {
+  font-size: 15px;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin: 0 0 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section-heading::before {
+  content: '';
+  width: 3px;
+  height: 18px;
+  background: #E63946;
+  border-radius: 2px;
+}
+
+/* ============ Payment Instructions ============ */
+.payment-instructions-card {
+  background: #121212;
+  border: 1px solid #262626;
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.amount-display-box {
+  background: #080808;
+  border: 1px solid #262626;
+  border-radius: 8px;
+  padding: 14px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: #A1A1AA;
+}
+
+.amount-highlight {
+  font-size: 22px;
+  color: #FFB800;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Regional Content */
+.regional-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Transfer Method */
+.transfer-method-block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.method-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #D4D4D8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.upi-id-box {
+  background: #080808;
+  border: 1px solid #262626;
+  border-radius: 8px;
+  padding: 12px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.upi-text {
+  font-size: 13px;
+  font-weight: 700;
+  color: #FFB800;
+  font-family: monospace;
+  word-break: break-all;
+  flex: 1;
+}
+
+.crypto-address {
+  font-size: 11px;
+}
+
+.holder-name {
+  font-size: 11px;
+  color: #A1A1AA;
+  font-weight: 500;
+}
+
+.copy-btn {
+  background: transparent;
+  border: 1px solid #262626;
+  color: #A1A1AA;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.copy-btn:hover {
+  border-color: #A1A1AA;
+  color: #FFFFFF;
+}
+
+/* Bank Details */
+.bank-details-grid {
+  background: #080808;
+  border: 1px solid #262626;
+  border-radius: 8px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bank-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #A1A1AA;
+  gap: 10px;
+}
+
+.bank-row strong {
+  color: #FFFFFF;
+  text-align: right;
+}
+
+/* ============ Upload Section ============ */
+.payment-action-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.upload-proof-card {
+  background: #121212;
+  border: 1px solid #262626;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.payment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #A1A1AA;
+}
+
+.file-upload-box {
+  position: relative;
+  background: #080808;
+  border: 1px dashed #3F3F46;
+  border-radius: 8px;
+  padding: 28px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.file-upload-box:hover {
+  border-color: #E63946;
+}
+
+.file-upload-box input[type="file"] {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+
+.file-upload-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #A1A1AA;
+}
+
+/* Status Notice */
+.status-notice-box {
+  background: rgba(255, 184, 0, 0.05);
+  border: 1px solid rgba(255, 184, 0, 0.2);
+  border-radius: 8px;
+  padding: 12px 14px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  font-size: 12px;
+  color: #D4D4D8;
+}
+
+.status-notice-box strong {
+  color: #FFB800;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.status-notice-box p {
+  margin: 0;
+  color: #A1A1AA;
+  line-height: 1.4;
+}
+
+/* Submit Button */
+.btn-submit-proof {
+  background: #E63946;
+  color: #FFFFFF;
+  border: none;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(230, 57, 70, 0.3);
+  width: 100%;
+}
+
+.btn-submit-proof:hover {
+  background: #C92C39;
+  transform: translateY(-2px);
+}
+
+.btn-submit-proof:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Trust Badge */
+.secure-trust-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 11px;
+  color: #A1A1AA;
+  padding: 4px 0;
+}
+
+/* ============ Responsive ============ */
+
+/* Tablet */
+@media (max-width: 900px) {
+  .payment-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .payment-page {
+    padding: 20px 10px 40px;
+  }
+  
+  .payment-instructions-card,
+  .upload-proof-card {
+    padding: 16px;
+  }
+  
+  .region-tabs {
+    flex-direction: column;
+  }
+  
+  .region-tab {
+    text-align: center;
+    padding: 12px;
+  }
+  
+  .amount-highlight {
+    font-size: 18px;
+  }
+  
+  .upi-id-box {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .copy-btn {
+    align-self: flex-end;
+  }
+  
+  .bank-row {
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .bank-row strong {
+    text-align: left;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 375px) {
+  .payment-page {
+    padding: 15px 8px 30px;
+  }
+  
+  .payment-main-title {
+    font-size: 22px;
+  }
+  
+  .payment-instructions-card,
+  .upload-proof-card {
+    padding: 12px;
+  }
+  
+  .section-heading {
+    font-size: 14px;
+  }
+}

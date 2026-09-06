@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 30" width="40" height="30">
+  <!-- Red background -->
+  <rect width="40" height="30" rx="5" fill="#E63946"/>
+  
+  <!-- CV Text -->
+  <text x="20" y="20" font-family="Arial, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.5">CV</text>
+</svg>

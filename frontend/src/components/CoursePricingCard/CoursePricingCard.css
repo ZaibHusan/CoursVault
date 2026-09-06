@@ -1,0 +1,333 @@
+/* ============ Pricing Card Base ============ */
+.pricing-card {
+  position: relative;
+  background: linear-gradient(145deg, #121212, #181818);
+  border: 2px solid #262626;
+  border-radius: 16px;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
+}
+
+.pricing-card--hovering {
+  border-color: #E63946;
+  box-shadow: 0 25px 60px rgba(230, 57, 70, 0.2);
+}
+
+/* ============ Top Ribbon ============ */
+.pricing-card__ribbon {
+  background: linear-gradient(90deg, #E63946, #C92C39);
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: #FFFFFF;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  margin-bottom: 2px;
+}
+
+/* ============ Discount Badge ============ */
+.pricing-card__discount-badge {
+  position: absolute;
+  top: 40px;
+  right: -32px;
+  transform: rotate(45deg);
+  background: #FFB800;
+  padding: 10px 35px;
+  box-shadow: 0 4px 12px rgba(255, 184, 0, 0.3);
+  z-index: 2;
+}
+
+.pricing-card__discount-text {
+  color: #080808;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+/* ============ Price Section ============ */
+.pricing-card__price-section {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: center;
+}
+
+.pricing-card__original-price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.pricing-card__original-label {
+  font-size: 11px;
+  color: #A1A1AA;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.pricing-card__original-value {
+  font-size: 16px;
+  color: #A1A1AA;
+  text-decoration: line-through;
+  font-weight: 600;
+}
+
+.pricing-card__current-price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  color: #FFFFFF;
+}
+
+.pricing-card__currency {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.pricing-card__amount {
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  line-height: 1;
+}
+
+.pricing-card__savings {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  background: rgba(255, 184, 0, 0.1);
+  border: 1px solid rgba(255, 184, 0, 0.25);
+  color: #FFB800;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 20px;
+  width: fit-content;
+  margin: 2px auto 0;
+}
+
+.pricing-card__gst {
+  font-size: 10px;
+  color: #71717A;
+}
+
+/* ============ Features List ============ */
+.pricing-card__features {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px 0;
+  border-top: 1px solid #222222;
+  border-bottom: 1px solid #222222;
+}
+
+.pricing-card__feature {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  color: #E4E4E7;
+}
+
+.pricing-card__feature svg {
+  color: #E63946;
+  flex-shrink: 0;
+}
+
+/* ============ CTA Button ============ */
+.pricing-card__cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #E63946, #C92C39);
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 14px 20px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 8px 20px rgba(230, 57, 70, 0.3);
+  letter-spacing: 0.5px;
+  width: 100%;
+}
+
+.pricing-card__cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(230, 57, 70, 0.45);
+  background: linear-gradient(135deg, #EF4444, #B91C1C);
+}
+
+.pricing-card__cta:active {
+  transform: translateY(0);
+}
+
+/* ============ Footer Meta ============ */
+.pricing-card-footer-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  font-size: 10px;
+  padding-top: 2px;
+}
+
+.pricing-card__trust {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #A1A1AA;
+}
+
+.pricing-card__trust svg {
+  color: #22C55E;
+}
+
+.pricing-card__urgency {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #E63946;
+  font-weight: 600;
+  background: rgba(230, 57, 70, 0.08);
+  padding: 5px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(230, 57, 70, 0.2);
+}
+
+/* ============ Responsive ============ */
+
+/* Tablet */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .pricing-card {
+    padding: 22px 18px;
+  }
+  
+  .pricing-card__amount {
+    font-size: 38px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .pricing-card {
+    padding: 18px 14px;
+    gap: 12px;
+    border-radius: 14px;
+  }
+
+  .pricing-card__ribbon {
+    font-size: 9px;
+    padding: 6px 10px;
+  }
+
+  .pricing-card__amount {
+    font-size: 34px;
+  }
+
+  .pricing-card__currency {
+    font-size: 16px;
+    margin-top: 6px;
+  }
+
+  .pricing-card__discount-badge {
+    top: 34px;
+    right: -28px;
+    padding: 8px 28px;
+  }
+
+  .pricing-card__discount-text {
+    font-size: 10px;
+  }
+
+  .pricing-card__features {
+    padding: 10px 0;
+    gap: 8px;
+  }
+
+  .pricing-card__feature {
+    font-size: 11px;
+  }
+
+  .pricing-card__cta {
+    padding: 12px 16px;
+    font-size: 13px;
+  }
+
+  .pricing-card-footer-meta {
+    font-size: 9px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 380px) {
+  .pricing-card {
+    padding: 14px 10px;
+    gap: 10px;
+  }
+  
+  .pricing-card__amount {
+    font-size: 30px;
+  }
+  
+  .pricing-card__currency {
+    font-size: 14px;
+    margin-top: 4px;
+  }
+  
+  .pricing-card__ribbon {
+    font-size: 8px;
+    letter-spacing: 0.5px;
+  }
+  
+  .pricing-card__feature {
+    font-size: 10px;
+    gap: 6px;
+  }
+  
+  .pricing-card__cta {
+    padding: 10px 14px;
+    font-size: 12px;
+  }
+  
+  .pricing-card-footer-meta {
+    flex-direction: column;
+    gap: 6px;
+    align-items: flex-start;
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 1025px) {
+  .pricing-card {
+    padding: 28px 24px;
+    position: sticky;
+    top: 20px;
+  }
+  
+  .pricing-card__amount {
+    font-size: 44px;
+  }
+  
+  .pricing-card__cta {
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,38 @@
+.DashboardLayout {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: #080808;
+}
+
+.layout-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 30px;
+  /* Premium dark scrollbar for the main content area */
+  scrollbar-width: thin;
+  scrollbar-color: #262626 #080808;
+}
+
+.layout-content::-webkit-scrollbar {
+  width: 6px;
+}
+.layout-content::-webkit-scrollbar-track {
+  background: #080808;
+}
+.layout-content::-webkit-scrollbar-thumb {
+  background: #262626;
+  border-radius: 4px;
+}
+
+/* Mobile: Leave space for bottom navigation */
+@media (max-width: 768px) {
+  .DashboardLayout {
+    flex-direction: column;
+  }
+  
+  .layout-content {
+    padding: 20px 15px 80px; /* 80px bottom padding clears the mobile nav */
+  }
+}

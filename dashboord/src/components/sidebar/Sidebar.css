@@ -1,0 +1,124 @@
+.admin-sidebar {
+  width: 260px;
+  height: 100vh;
+  background-color: #121212;
+  border-right: 1px solid #262626;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  z-index: 50;
+}
+
+.sidebar-brand {
+  padding: 30px 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid #262626;
+}
+
+.brand-text {
+  font-size: 20px;
+  font-weight: 700;
+  color: #FFFFFF;
+  letter-spacing: -0.5px;
+}
+
+.sidebar-nav {
+  flex: 1;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  border-radius: 10px;
+  color: #A1A1AA;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.nav-item:hover {
+  background-color: rgba(255, 255, 255, 0.03);
+  color: #FFFFFF;
+}
+
+.nav-item.active {
+  background-color: rgba(230, 57, 70, 0.1);
+  color: #E63946;
+}
+
+.sidebar-footer {
+  padding: 20px 16px;
+  border-top: 1px solid #262626;
+}
+
+.logout-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  border-radius: 10px;
+  color: #A1A1AA;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.logout-btn:hover {
+  background-color: rgba(230, 57, 70, 0.1);
+  color: #E63946;
+}
+
+/* Mobile View: Bottom Navigation Bar */
+@media (max-width: 768px) {
+  .admin-sidebar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 65px;
+    flex-direction: row;
+    border-right: none;
+    border-top: 1px solid #262626;
+    background-color: rgba(18, 18, 18, 0.95);
+    backdrop-filter: blur(10px);
+  }
+
+  .sidebar-brand {
+    display: none; /* Hide logo on mobile to save space */
+  }
+
+  .sidebar-nav {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    gap: 0;
+    width: 100%;
+  }
+
+  .nav-item {
+    flex-direction: column;
+    gap: 4px;
+    padding: 8px 12px;
+    border-radius: 0;
+  }
+
+  .nav-item.active {
+    background-color: transparent;
+  }
+
+  .nav-label {
+    font-size: 10px;
+  }
+
+  .sidebar-footer {
+    display: none; /* Consider moving logout to a profile header on mobile */
+  }
+}

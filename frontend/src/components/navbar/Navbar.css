@@ -1,0 +1,487 @@
+/* --- Base Navbar --- */
+.navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background-color: rgba(8, 8, 8, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 1000;
+  border-bottom: 1px solid #262626;
+  transition: all 0.3s ease;
+}
+
+.navbar-scrolled {
+  background-color: rgba(8, 8, 8, 0.98);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-container {
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+/* --- Logo --- */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  z-index: 1001;
+  flex-shrink: 0;
+}
+
+.logo-box {
+  background-color: #E63946;
+  color: #FFFFFF;
+  font-weight: 800;
+  font-size: 13px;
+  padding: 5px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: 700;
+  color: #FFFFFF;
+  letter-spacing: -0.5px;
+}
+
+.logo-accent {
+  color: #E63946;
+}
+
+/* --- Desktop Navigation --- */
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex: 1;
+  justify-content: center;
+}
+
+.nav-link {
+  color: #A1A1AA;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  padding: 6px 0;
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #E63946;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #FFFFFF;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link.active {
+  color: #FFFFFF;
+}
+
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* ============ Currency Dropdown ============ */
+.currency-dropdown {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.currency-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: 1px solid #262626;
+  color: #FFFFFF;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.currency-toggle:hover {
+  border-color: #3F3F46;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.currency-toggle svg {
+  transition: transform 0.3s ease;
+}
+
+.currency-toggle svg.rotate {
+  transform: rotate(180deg);
+}
+
+.currency-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: #121212;
+  border: 1px solid #262626;
+  border-radius: 10px;
+  padding: 6px;
+  min-width: 160px;
+  z-index: 1002;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.currency-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 12px;
+  background: transparent;
+  border: none;
+  color: #A1A1AA;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+
+.currency-option:hover {
+  background: #1E1E1E;
+  color: #FFFFFF;
+}
+
+.currency-option.active {
+  background: rgba(230, 57, 70, 0.1);
+  color: #E63946;
+}
+
+.currency-flag {
+  font-size: 16px;
+}
+
+.currency-symbol {
+  font-weight: 700;
+  width: 20px;
+  color: #E63946;
+}
+
+/* --- WhatsApp Button --- */
+.navbar-whatsapp {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #E63946;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid rgba(230, 57, 70, 0.4);
+  padding: 8px 18px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  background-color: transparent;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.navbar-whatsapp:hover {
+  background-color: #E63946;
+  color: #FFFFFF;
+  border-color: #E63946;
+}
+
+/* --- Hamburger --- */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 38px;
+  height: 38px;
+  background: transparent;
+  border: 1px solid #262626;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+  gap: 4px;
+}
+
+.hamburger .bar {
+  width: 18px;
+  height: 2px;
+  background-color: #FFFFFF;
+  border-radius: 1px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.open .bar:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.hamburger.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open .bar:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* --- Mobile Menu --- */
+.mobile-menu {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  max-height: 0;
+  background-color: #0A0A0A;
+  border-bottom: 1px solid #262626;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  z-index: 999;
+}
+
+.mobile-menu.open {
+  max-height: 320px;
+}
+
+.mobile-menu-content {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 20px 16px;
+}
+
+.mobile-link {
+  color: #A1A1AA;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 14px 12px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid rgba(38, 38, 38, 0.5);
+}
+
+.mobile-link:last-child {
+  border-bottom: none;
+}
+
+.mobile-link:hover {
+  color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.03);
+  padding-left: 16px;
+}
+
+.mobile-link.active {
+  color: #FFFFFF;
+}
+
+.mobile-whatsapp {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #E63946;
+  font-weight: 600;
+  margin-top: 12px;
+  border-bottom: none;
+  background-color: rgba(230, 57, 70, 0.05);
+  border: 1px solid rgba(230, 57, 70, 0.2);
+  justify-content: center;
+}
+
+.mobile-whatsapp:hover {
+  background-color: #E63946;
+  color: #FFFFFF;
+  padding-left: 12px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+  .navbar-links {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    height: 64px;
+  }
+  
+  .navbar-container {
+    padding: 0 12px;
+    gap: 8px;
+  }
+  
+  /* Hide links and whatsapp on mobile */
+  .navbar-links,
+  .navbar-whatsapp {
+    display: none;
+  }
+  
+  /* Keep currency visible */
+  .currency-dropdown {
+    display: block;
+  }
+  
+  .currency-toggle {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+  
+  .currency-menu {
+    min-width: 140px;
+    right: -40px;
+  }
+  
+  .currency-option {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+  
+  .hamburger {
+    display: flex;
+  }
+  
+  .mobile-menu {
+    top: 64px;
+  }
+  
+  .logo-text {
+    font-size: 18px;
+  }
+  
+  .logo-box {
+    font-size: 12px;
+    padding: 4px 7px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    height: 60px;
+  }
+  
+  .navbar-container {
+    padding: 0 10px;
+    gap: 6px;
+  }
+  
+  .logo-text {
+    font-size: 16px;
+  }
+  
+  .logo-box {
+    font-size: 11px;
+    padding: 4px 6px;
+  }
+  
+  .currency-toggle {
+    padding: 5px 8px;
+    font-size: 11px;
+  }
+  
+  .currency-menu {
+    min-width: 130px;
+    right: -35px;
+  }
+  
+  .currency-flag {
+    font-size: 14px;
+  }
+  
+  .currency-symbol {
+    width: 16px;
+  }
+  
+  .mobile-menu {
+    top: 60px;
+  }
+  
+  .mobile-menu-content {
+    padding: 4px 16px 12px;
+  }
+  
+  .mobile-link {
+    font-size: 15px;
+    padding: 13px 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .navbar {
+    height: 56px;
+  }
+  
+  .navbar-container {
+    padding: 0 8px;
+    gap: 4px;
+  }
+  
+  .logo-text {
+    font-size: 15px;
+  }
+  
+  .currency-toggle {
+    padding: 4px 6px;
+    font-size: 10px;
+  }
+  
+  .currency-toggle span {
+    font-size: 10px;
+  }
+  
+  .mobile-menu {
+    top: 56px;
+  }
+  
+  .mobile-menu-content {
+    padding: 4px 12px 12px;
+  }
+  
+  .mobile-link {
+    font-size: 14px;
+    padding: 12px 8px;
+  }
+  
+  .hamburger {
+    width: 34px;
+    height: 34px;
+  }
+}

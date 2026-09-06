@@ -1,0 +1,462 @@
+/* ============ Home Page Base ============ */
+.home-page {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Scrollbar */
+.home-page::-webkit-scrollbar {
+  width: 8px;
+}
+.home-page::-webkit-scrollbar-track {
+  background: #121212;
+}
+.home-page::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+/* ============ Header ============ */
+.home-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #262626;
+}
+
+.home-header h1 {
+  color: #FFFFFF;
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.home-header p {
+  color: #A1A1AA;
+  font-size: 14px;
+  margin: 4px 0 0;
+}
+
+.btn-create {
+  background: #E63946;
+  color: #FFFFFF;
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 13px;
+  transition: all 0.3s ease;
+}
+
+.btn-create:hover {
+  background: #C92C39;
+  transform: translateY(-1px);
+}
+
+/* ============ Stats Grid ============ */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.stat-card {
+  background: #121212;
+  border: 1px solid #262626;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  border-color: #333;
+  transform: translateY(-2px);
+}
+
+.stat-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.stat-icon.courses {
+  background: rgba(59, 130, 246, 0.1);
+  color: #3B82F6;
+}
+
+.stat-icon.orders {
+  background: rgba(139, 92, 246, 0.1);
+  color: #8B5CF6;
+}
+
+.stat-icon.pending {
+  background: rgba(234, 179, 8, 0.1);
+  color: #EAB308;
+}
+
+.stat-icon.completed {
+  background: rgba(5, 150, 105, 0.1);
+  color: #059669;
+}
+
+.stat-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-value {
+  color: #FFFFFF;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.stat-label {
+  color: #A1A1AA;
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+/* ============ Revenue Stats ============ */
+.revenue-stats {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.revenue-card {
+  background: rgba(5, 150, 105, 0.1);
+  border: 1px solid rgba(5, 150, 105, 0.3);
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 200px;
+  flex: 1;
+}
+
+.revenue-card svg {
+  color: #059669;
+  flex-shrink: 0;
+}
+
+.revenue-value {
+  color: #059669;
+  font-size: 22px;
+  font-weight: 700;
+  display: block;
+}
+
+.revenue-label {
+  color: #A1A1AA;
+  font-size: 12px;
+}
+
+.region-mini-stats {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  flex: 2;
+}
+
+.mini-region-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #121212;
+  border: 1px solid #262626;
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-size: 13px;
+  color: #E4E4E7;
+  font-weight: 500;
+  flex: 1;
+  justify-content: center;
+  min-width: 100px;
+}
+
+/* ============ Sections ============ */
+.section {
+  background: #121212;
+  border: 1px solid #262626;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.section-header h2 {
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.section-header button {
+  background: none;
+  border: none;
+  color: #A1A1AA;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  transition: color 0.2s ease;
+}
+
+.section-header button:hover {
+  color: #FFFFFF;
+}
+
+/* ============ Orders List ============ */
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background: #0F0F0F;
+  border: 1px solid #1F1F1F;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+  gap: 12px;
+}
+
+.order-item:hover {
+  border-color: #333;
+}
+
+.order-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+
+.order-id {
+  font-size: 11px;
+  color: #A1A1AA;
+  font-weight: 600;
+}
+
+.order-course {
+  font-size: 13px;
+  color: #FFFFFF;
+  font-weight: 500;
+}
+
+.order-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.order-customer {
+  font-size: 11px;
+  color: #A1A1AA;
+}
+
+.order-amount {
+  color: #E63946;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.order-status {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.status-pending {
+  background: rgba(234, 179, 8, 0.1);
+  color: #EAB308;
+}
+
+.status-approved {
+  background: rgba(5, 150, 105, 0.1);
+  color: #059669;
+}
+
+.status-rejected {
+  background: rgba(239, 68, 68, 0.1);
+  color: #EF4444;
+}
+
+.status-completed {
+  background: rgba(139, 92, 246, 0.1);
+  color: #8B5CF6;
+}
+
+/* ============ Courses List ============ */
+.courses-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.course-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: #0F0F0F;
+  border: 1px solid #1F1F1F;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.course-item:hover {
+  border-color: #333;
+}
+
+.course-item img {
+  width: 60px;
+  height: 38px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.course-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.course-title {
+  font-size: 13px;
+  color: #FFFFFF;
+  font-weight: 500;
+}
+
+.course-price {
+  font-size: 11px;
+  color: #E63946;
+  font-weight: 600;
+}
+
+.course-status {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.course-status.published {
+  background: rgba(5, 150, 105, 0.1);
+  color: #059669;
+}
+
+.course-status.draft {
+  background: rgba(107, 114, 128, 0.1);
+  color: #6B7280;
+}
+
+/* ============ Empty State ============ */
+.empty-text {
+  color: #A1A1AA;
+  font-size: 13px;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ============ Responsive ============ */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .home-page {
+    padding: 16px;
+    gap: 16px;
+  }
+  
+  .home-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .revenue-stats {
+    flex-direction: column;
+  }
+  
+  .revenue-card {
+    min-width: 100%;
+  }
+  
+  .region-mini-stats {
+    flex-direction: column;
+  }
+  
+  .mini-region-badge {
+    justify-content: flex-start;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .home-page {
+    padding: 12px;
+  }
+  
+  .home-header h1 {
+    font-size: 22px;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .order-item,
+  .course-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .order-meta {
+    align-items: flex-start;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,174 @@
+/* ============ Offer Banner Base ============ */
+.offer-banner {
+  position: relative;
+  width: 100%;
+  background: linear-gradient(135deg, #121212 0%, #1a1a1a 100%);
+  border: 1px solid #262626;
+  border-radius: 12px;
+  padding: 24px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Accent line */
+.offer-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, #FFB800, #E63946);
+}
+
+/* ============ Content ============ */
+.offer-banner__content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.offer-banner__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 184, 0, 0.1);
+  border: 1px solid rgba(255, 184, 0, 0.3);
+  color: #FFB800;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+  width: fit-content;
+  letter-spacing: 0.8px;
+}
+
+.offer-banner__title {
+  font-size: clamp(18px, 2.5vw, 22px);
+  font-weight: 800;
+  color: #FFFFFF;
+  margin: 0;
+  letter-spacing: -0.5px;
+  line-height: 1.3;
+}
+
+.offer-banner__title .highlight {
+  color: #E63946;
+}
+
+.offer-banner__subtitle {
+  font-size: 13px;
+  color: #A1A1AA;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ============ CTA Button (WhatsApp) ============ */
+.offer-banner__action {
+  flex-shrink: 0;
+}
+
+.offer-banner__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #25D366;
+  color: #FFFFFF;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+  white-space: nowrap;
+}
+
+.offer-banner__btn:hover {
+  background: #20BD5A;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+}
+
+.offer-banner__btn:active {
+  transform: translateY(0);
+}
+
+/* ============ Responsive ============ */
+
+/* Tablet */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .offer-banner {
+    padding: 20px 24px;
+    gap: 20px;
+  }
+  
+  .offer-banner__title {
+    font-size: 19px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .offer-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+    gap: 14px;
+    border-radius: 10px;
+  }
+
+  .offer-banner__title {
+    font-size: 17px;
+  }
+
+  .offer-banner__subtitle {
+    font-size: 12px;
+  }
+
+  .offer-banner__btn {
+    width: 100%;
+    justify-content: center;
+    padding: 12px;
+    font-size: 12px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 380px) {
+  .offer-banner {
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .offer-banner__title {
+    font-size: 15px;
+  }
+  
+  .offer-banner__badge {
+    font-size: 9px;
+    padding: 3px 8px;
+  }
+  
+  .offer-banner__btn {
+    font-size: 11px;
+    padding: 10px;
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 1025px) {
+  .offer-banner {
+    padding: 28px 36px;
+  }
+  
+  .offer-banner__title {
+    font-size: 24px;
+  }
+}

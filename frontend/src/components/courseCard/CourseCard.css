@@ -1,0 +1,367 @@
+/* ============ Course Card Base ============ */
+.course-card {
+  width: 100%;
+  background-color: #121212;
+  border: 1px solid #262626;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.course-card:hover {
+  transform: translateY(-4px);
+  border-color: #E63946;
+  box-shadow: 0 12px 32px rgba(230, 57, 70, 0.2);
+}
+
+.course-card:active {
+  transform: translateY(-2px);
+}
+
+/* ============ Image Container ============ */
+.card-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: #181818;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.course-card:hover .card-image img {
+  transform: scale(1.05);
+}
+
+/* Gradient overlay */
+.card-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, transparent 60%, rgba(0,0,0,0.5) 100%);
+  pointer-events: none;
+}
+
+/* ============ Badges ============ */
+.discount-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #E63946;
+  color: #FFFFFF;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 6px;
+  z-index: 2;
+  box-shadow: 0 2px 8px rgba(230, 57, 70, 0.4);
+}
+
+.access-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(18, 18, 18, 0.85);
+  backdrop-filter: blur(8px);
+  color: #4ADE80;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: 1px solid rgba(74, 222, 128, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  z-index: 2;
+}
+
+/* ============ Content Area ============ */
+.card-content {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 10px;
+}
+
+.card-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.3;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-desc {
+  font-size: 12px;
+  color: #A1A1AA;
+  line-height: 1.4;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ============ Trust Signals ============ */
+.card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 11px;
+  color: #A1A1AA;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.meta-item svg {
+  color: #FFB800;
+}
+
+/* ============ Footer (Price & CTA) ============ */
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 1px solid #1e1e1e;
+}
+
+.price-section {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.current-price {
+  font-size: 18px;
+  font-weight: 800;
+  color: #FFFFFF;
+}
+
+.original-price {
+  font-size: 12px;
+  color: #6B7280;
+  text-decoration: line-through;
+}
+
+.view-btn {
+  background: #E63946;
+  color: #FFFFFF;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.view-btn:hover {
+  background: #C92C39;
+  transform: translateY(-1px);
+}
+
+.view-btn:active {
+  transform: translateY(0);
+}
+
+/* ============ Loading Skeleton ============ */
+.course-card-skeleton {
+  background: #121212;
+  border: 1px solid #262626;
+  border-radius: 12px;
+  overflow: hidden;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.skeleton-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #1e1e1e;
+}
+
+.skeleton-content {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.skeleton-title {
+  height: 18px;
+  background: #1e1e1e;
+  border-radius: 4px;
+  width: 80%;
+}
+
+.skeleton-text {
+  height: 12px;
+  background: #1e1e1e;
+  border-radius: 4px;
+  width: 60%;
+}
+
+.skeleton-price {
+  height: 24px;
+  background: #1e1e1e;
+  border-radius: 4px;
+  width: 40%;
+  margin-top: auto;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* ============ Responsive ============ */
+
+/* Tablet */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .card-content {
+    padding: 16px;
+    gap: 12px;
+  }
+  
+  .card-title {
+    font-size: 16px;
+  }
+  
+  .card-desc {
+    font-size: 13px;
+  }
+  
+  .card-meta {
+    font-size: 12px;
+    gap: 14px;
+  }
+  
+  .current-price {
+    font-size: 20px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+  .card-content {
+    padding: 18px;
+    gap: 12px;
+  }
+  
+  .card-title {
+    font-size: 17px;
+  }
+  
+  .card-desc {
+    font-size: 13px;
+  }
+  
+  .card-meta {
+    font-size: 12px;
+    gap: 16px;
+  }
+  
+  .current-price {
+    font-size: 22px;
+  }
+  
+  .original-price {
+    font-size: 13px;
+  }
+  
+  .view-btn {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 380px) {
+  .card-content {
+    padding: 10px;
+    gap: 8px;
+  }
+  
+  .card-title {
+    font-size: 13px;
+  }
+  
+  .card-desc {
+    font-size: 11px;
+  }
+  
+  .card-meta {
+    font-size: 10px;
+    gap: 6px;
+  }
+  
+  .current-price {
+    font-size: 16px;
+  }
+  
+  .view-btn {
+    padding: 6px 12px;
+    font-size: 11px;
+  }
+  
+  .discount-badge,
+  .access-badge {
+    font-size: 9px;
+    padding: 3px 6px;
+  }
+}
+
+/* Grid container (add to parent) */
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  width: 100%;
+}
+
+/* Mobile: single column */
+@media (max-width: 640px) {
+  .courses-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+/* Tablet: 2 columns */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .courses-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+/* Desktop: 3+ columns */
+@media (min-width: 1025px) {
+  .courses-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+}

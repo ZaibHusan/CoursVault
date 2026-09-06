@@ -1,0 +1,518 @@
+/* ============ Checkout Page Base ============ */
+.checkout-page {
+  background: #080808;
+  min-height: 100vh;
+  padding: 30px 15px 60px;
+  color: #FFFFFF;
+}
+
+.checkout-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ============ Header ============ */
+.checkout-header {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.checkout-main-title {
+  font-size: clamp(24px, 4vw, 32px);
+  font-weight: 800;
+  margin: 0 0 8px;
+  letter-spacing: -1px;
+}
+
+.checkout-main-title span {
+  color: #E63946;
+}
+
+.checkout-subtitle {
+  font-size: 14px;
+  color: #A1A1AA;
+  margin: 0;
+}
+
+/* ============ Grid Layout ============ */
+.checkout-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.section-heading {
+  font-size: 16px;
+  font-weight: 700;
+  border-bottom: 1px solid #262626;
+  padding-bottom: 10px;
+  margin: 0 0 18px;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section-heading::before {
+  content: '';
+  width: 3px;
+  height: 18px;
+  background: #E63946;
+  border-radius: 2px;
+}
+
+/* ============ Form Wrapper ============ */
+.checkout-form-wrapper {
+  background: #121212;
+  border: 1px solid #262626;
+  border-radius: 14px;
+  padding: 24px;
+}
+
+/* Error Box */
+.checkout-error-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  color: #EF4444;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.checkout-error-box button {
+  margin-left: auto;
+  background: none;
+  border: none;
+  color: #EF4444;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* ============ Form ============ */
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #E4E4E7;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.form-group label svg {
+  color: #A1A1AA;
+}
+
+.form-group input,
+.form-group textarea {
+  background: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 12px 14px;
+  color: #FFFFFF;
+  font-size: 13px;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #E63946;
+  box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.1);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #6B7280;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+.form-hint {
+  font-size: 10px;
+  color: #A1A1AA;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.form-hint::before {
+  content: 'ℹ️';
+  font-size: 10px;
+}
+
+/* ============ Proceed Button ============ */
+.btn-proceed-payment {
+  background: #E63946;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 10px;
+  padding: 14px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 5px;
+  box-shadow: 0 8px 25px rgba(230, 57, 70, 0.3);
+  letter-spacing: 0.5px;
+  width: 100%;
+}
+
+.btn-proceed-payment:hover {
+  background: #C92C39;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(230, 57, 70, 0.4);
+}
+
+.btn-proceed-payment:active {
+  transform: translateY(0);
+}
+
+.btn-proceed-payment:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ============ WhatsApp Alternative ============ */
+.whatsapp-alternative {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.divider-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.divider-line {
+  flex: 1;
+  height: 1px;
+  background: #262626;
+}
+
+.divider-text {
+  font-size: 10px;
+  font-weight: 600;
+  color: #6B7280;
+  letter-spacing: 1px;
+}
+
+.btn-whatsapp-order {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #25D366;
+  color: #080808;
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.btn-whatsapp-order:hover {
+  background: #20BD5A;
+  transform: translateY(-2px);
+}
+
+/* ============ Sidebar ============ */
+.checkout-sidebar {
+  position: sticky;
+  top: 20px;
+}
+
+.order-summary-card {
+  background: #121212;
+  border: 1px solid #262626;
+  border-radius: 14px;
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.order-summary-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #E63946, #FFB800, #E63946);
+}
+
+/* Course Image */
+.summary-course-image {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 14px;
+}
+
+.summary-course-image img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+
+/* Course Title */
+.summary-item-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.summary-course-title {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #FFFFFF;
+}
+
+.summary-access-tag {
+  display: inline-block;
+  background: rgba(255, 184, 0, 0.1);
+  border: 1px solid rgba(255, 184, 0, 0.3);
+  color: #FFB800;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 4px;
+  width: fit-content;
+}
+
+/* Pricing */
+.summary-pricing-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-top: 1px solid #262626;
+  border-bottom: 1px solid #262626;
+  padding: 16px 0;
+  margin-bottom: 16px;
+}
+
+.breakdown-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: #A1A1AA;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+  color: #A1A1AA;
+}
+
+.total-row {
+  font-size: 15px;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-top: 4px;
+  padding-top: 10px;
+  border-top: 1px dashed #262626;
+}
+
+.final-price {
+  color: #E63946;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.savings-note {
+  font-size: 11px;
+  color: #22C55E;
+  margin: 0;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Trust Badge */
+.summary-trust-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 10px;
+  color: #FFB800;
+  background: rgba(255, 184, 0, 0.05);
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 184, 0, 0.2);
+}
+
+/* ============ Responsive ============ */
+
+/* Tablet */
+@media (max-width: 900px) {
+  .checkout-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .checkout-sidebar {
+    position: static;
+  }
+  
+  .order-summary-card {
+    padding: 20px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .checkout-page {
+    padding: 20px 12px 40px;
+  }
+  
+  .checkout-form-wrapper,
+  .order-summary-card {
+    padding: 18px;
+    border-radius: 12px;
+  }
+  
+  .section-heading {
+    font-size: 15px;
+    margin-bottom: 14px;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 11px 12px;
+    font-size: 12px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .checkout-page {
+    padding: 15px 10px 30px;
+  }
+  
+  .checkout-main-title {
+    font-size: 22px;
+  }
+  
+  .checkout-subtitle {
+    font-size: 11px;
+  }
+  
+  .checkout-form-wrapper,
+  .order-summary-card {
+    padding: 14px;
+    border-radius: 10px;
+  }
+  
+  .section-heading {
+    font-size: 14px;
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+  }
+  
+  .form-group label {
+    font-size: 11px;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 10px;
+    font-size: 11px;
+  }
+  
+  .form-hint {
+    font-size: 9px;
+  }
+  
+  .btn-proceed-payment {
+    padding: 12px;
+    font-size: 13px;
+  }
+  
+  .btn-whatsapp-order {
+    padding: 10px;
+    font-size: 12px;
+  }
+  
+  .summary-course-title {
+    font-size: 13px;
+  }
+  
+  .breakdown-row {
+    font-size: 11px;
+  }
+  
+  .final-price {
+    font-size: 18px;
+  }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 375px) {
+  .checkout-page {
+    padding: 10px 8px 25px;
+  }
+  
+  .checkout-main-title {
+    font-size: 20px;
+  }
+  
+  .checkout-form-wrapper,
+  .order-summary-card {
+    padding: 12px;
+    border-radius: 8px;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 9px;
+    font-size: 10px;
+  }
+  
+  .btn-proceed-payment {
+    padding: 10px;
+    font-size: 12px;
+  }
+  
+  .summary-course-title {
+    font-size: 12px;
+  }
+  
+  .final-price {
+    font-size: 16px;
+  }
+}
