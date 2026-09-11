@@ -3,12 +3,13 @@ import { useNavigate } from 'react-router-dom';
 import { ArrowRight, Sparkles } from 'lucide-react';
 import './Home.css';
 import Hero from '../../components/hero/Hero';
-import VideoTutorial from '../../components/videoTutorial/VideoTutorial'; // ✅ ADD THIS
+
 import Testimonials from '../../components/Testimonials/Testimonials';
 import FAQ from '../../components/FAQ/FAQ';
 import { useCourses } from '../../hooks/useCourses';
 import { useCurrency } from '../../hooks/useCurrency';
 import CourseCard from '../../components/courseCard/CourseCard';
+import VideoTutorial from '../../components/VideoTutorial/VideoTutorial';
 
 export default function Home() {
   const navigate = useNavigate();
