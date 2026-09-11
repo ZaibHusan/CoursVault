@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import './OrderSuccess.css';
-import OrderSteps from '../../components/orderSteps/OrderSteps';
 import { useCurrency } from '../../hooks/useCurrency';
 import { 
   CheckCircle2, Clock, MessageSquare, Home, ShieldCheck, Mail, Phone, Copy, Check 
 } from 'lucide-react';
+import OrderSteps from '../../components/OrderSteps/OrderSteps';
 
 export default function OrderSuccess() {
   const navigate = useNavigate();
