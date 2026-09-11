@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { ArrowRight, Sparkles } from 'lucide-react';
 import './Home.css';
 import Hero from '../../components/hero/Hero';
+import VideoTutorial from '../../components/videoTutorial/VideoTutorial'; // ✅ ADD THIS
 import Testimonials from '../../components/Testimonials/Testimonials';
 import FAQ from '../../components/FAQ/FAQ';
 import { useCourses } from '../../hooks/useCourses';
@@ -23,7 +24,6 @@ export default function Home() {
     fetchFeaturedCourses(currency);
   }, [currency]);
 
-  // Loading skeleton
   const CourseSkeleton = () => (
     <div className="course-card-skeleton">
       <div className="skeleton-image"></div>
@@ -37,12 +37,14 @@ export default function Home() {
 
   return (
     <div className="home-page">
-      <Hero/>
+      <Hero />
+
+      {/* ✅ VIDEO TUTORIAL — Right after Hero, before Featured Courses */}
+      <VideoTutorial />
 
       {/* Featured Courses Section */}
       <section className="featured-section">
         <div className="container">
-          {/* Section Header */}
           <div className="section-header">
             <span className="section-subtitle">
               <Sparkles size={16} />
@@ -56,7 +58,6 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Error State */}
           {error && (
             <div className="error-banner">
               <span>{error}</span>
@@ -64,14 +65,12 @@ export default function Home() {
             </div>
           )}
 
-          {/* Loading State */}
           {isLoadingFeatured ? (
             <div className="courses-grid">
               {[1, 2, 3].map(i => <CourseSkeleton key={i} />)}
             </div>
           ) : featuredCourses.length > 0 ? (
             <>
-              {/* Courses Grid - Show max 5 */}
               <div className="courses-grid">
                 {featuredCourses.slice(0, 5).map(course => (
                   <CourseCard 
@@ -82,7 +81,6 @@ export default function Home() {
                 ))}
               </div>
 
-              {/* View All Button */}
               <div className="view-all-wrapper">
                 <button 
                   className="view-all-btn"
@@ -94,7 +92,6 @@ export default function Home() {
               </div>
             </>
           ) : (
-            /* Empty State */
             <div className="empty-state">
               <p>No featured courses yet. Check back soon!</p>
               <button 
@@ -108,10 +105,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials */}
       <Testimonials />
-
-      {/* FAQ */}
       <FAQ />
     </div>
   );

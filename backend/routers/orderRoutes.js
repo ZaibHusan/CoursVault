@@ -10,6 +10,7 @@ import {
   updateOrderCurrency,
 } from '../controllers/orderController.js';
 import upload from '../middlarwears/uploadMiddleware.js';
+import uploadPaymentProofMiddleware from '../middlarwears/uploadPaymentProof.js';
 
 const OrderRoute = express.Router();
 
@@ -21,7 +22,7 @@ OrderRoute.post('/create', createOrder);
 // Upload payment proof
 OrderRoute.post(
   '/upload-proof/:id',
-  upload.single('screenshot'),
+  uploadPaymentProofMiddleware.single('screenshot'),
   uploadPaymentProof
 );
 

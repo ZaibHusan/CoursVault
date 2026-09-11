@@ -22,7 +22,12 @@ app.use(cors({
   origin: [...new Set([
     process.env.CLIENT_URL,
     'http://localhost:5173',
-    'http://localhost:5174'
+    'http://localhost:5174',
+    'http://localhost:7000',
+    'https://coursvault.com',
+    'https://www.coursvault.com',
+    'https://admin.coursvault.com',
+    'https://api.coursvault.com'
   ].filter(Boolean))],
   credentials: true,
 }));
