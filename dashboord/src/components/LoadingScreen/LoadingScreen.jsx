@@ -14,7 +14,7 @@ export default function LoadingScreen() {
         <ShieldCheck size={32} color="#E63946" className="center-icon" />
       </div>
       <div className="loading-text-container">
-        <h2 className="loading-title">CoursVault</h2>
+        <h2 className="loading-title">CoursesGuy</h2>
       </div>
     </div>
   );

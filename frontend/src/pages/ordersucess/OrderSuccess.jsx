@@ -140,7 +140,7 @@ export default function OrderSuccess() {
           {/* Trust Badge */}
           <div className="success-footer-trust">
             <ShieldCheck size={14} color="#FFB800" />
-            <span>Thank you for choosing CoursVault. Your future starts here.</span>
+            <span>Thank you for choosing CoursesGuy. Your future starts here.</span>
           </div>
 
         </div>

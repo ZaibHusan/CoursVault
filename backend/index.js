@@ -24,10 +24,10 @@ app.use(cors({
     'http://localhost:5173',
     'http://localhost:5174',
     'http://localhost:7000',
-    'https://coursvault.com',
-    'https://www.coursvault.com',
-    'https://admin.coursvault.com',
-    'https://api.coursvault.com'
+    'https://coursesguy.com',
+    'https://www.coursesguy.com',
+    'https://admin.coursesguy.com',
+    'https://api.coursesguy.com'
   ].filter(Boolean))],
   credentials: true,
 }));

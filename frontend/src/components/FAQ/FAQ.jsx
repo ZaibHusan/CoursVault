@@ -39,7 +39,7 @@ export default function FAQ() {
                     <span className="faq-subtitle">GOT QUESTIONS?</span>
                     <h2 className="faq-main-title">Frequently Asked <span>Questions</span></h2>
                     <p className="faq-description">
-                        Everything you need to know about course access, payments, and learning on CoursVault.
+                        Everything you need to know about course access, payments, and learning on CoursesGuy.
                     </p>
                 </div>
 

@@ -12,7 +12,7 @@ export default function Sidebar() {
             {/* Top: Logo */}
             <div className="sidebar-brand">
                 <ShieldCheck size={28} color="#E63946" />
-                <span className="brand-text">CoursVault</span>
+                <span className="brand-text">CoursesGuy</span>
             </div>
 
             {/* Middle: Navigation Links */}

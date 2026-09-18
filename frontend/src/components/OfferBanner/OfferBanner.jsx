@@ -23,7 +23,7 @@ export default function OfferBanner() {
           Get <span className="highlight">All Courses</span> in One Bundle
         </h2>
         <p className="offer-banner__subtitle">
-          Lifetime access to the complete CoursVault library. Massive savings!
+          Lifetime access to the complete CoursesGuy library. Massive savings!
         </p>
       </div>
       <div className="offer-banner__action">

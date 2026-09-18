@@ -2,22 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://coursvault.com/</loc>
-    <lastmod>2026-09-05</lastmod>
+    <loc>https://coursesguy.com/</loc>
+    <lastmod>2026-09-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
-    <loc>https://coursvault.com/courses</loc>
-    <lastmod>2026-09-05</lastmod>
+    <loc>https://coursesguy.com/courses</loc>
+    <lastmod>2026-09-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
-    <loc>https://coursvault.com/about</loc>
-    <lastmod>2026-09-05</lastmod>
+    <loc>https://coursesguy.com/about</loc>
+    <lastmod>2026-09-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>

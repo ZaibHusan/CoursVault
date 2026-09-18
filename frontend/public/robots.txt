@@ -4,4 +4,4 @@ Disallow: /checkout
 Disallow: /payment
 Disallow: /order-success
 
-Sitemap: https://coursvault.com/sitemap.xml
+Sitemap: https://coursesguy.com/sitemap.xml

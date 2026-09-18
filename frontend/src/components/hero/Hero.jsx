@@ -123,8 +123,8 @@ const Hero = () => {
             {/* Slider top */}
             <div className="hero__slider-top">
               <span className="hero__brand">
-                <span className="hero__brand-badge">CV</span>
-                COURSVAULT
+                <span className="hero__brand-badge">CG</span>
+                COURSESGUY
               </span>
               <span className="hero__premium">
                 <Sparkles size={10} />

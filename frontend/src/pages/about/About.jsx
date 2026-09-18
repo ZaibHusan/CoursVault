@@ -41,7 +41,7 @@ export default function About() {
         <div className="about-header">
           <div className="about-badge">
             <Sparkles size={12} />
-            <span>ABOUT COURSVAULT</span>
+            <span>ABOUT COURSESGUY</span>
           </div>
           <h2 className="about-title">
             Democratizing <span>Elite Education</span> For Everyone
@@ -77,7 +77,7 @@ export default function About() {
               Learning Without <span>Financial Barriers</span>
             </h3>
             <p className="about-story-text">
-              At CoursVault, we believe that world-class knowledge shouldn't come with an inflated price tag. 
+              At CoursesGuy, we believe that world-class knowledge shouldn't come with an inflated price tag. 
               We curate and provide top-tier, premium courses across development, design, and data science, 
               making them radically accessible and budget-friendly.
             </p>

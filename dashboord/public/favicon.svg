@@ -2,6 +2,6 @@
   <!-- Red background box -->
   <rect width="32" height="32" rx="4" fill="#E63946"/>
   
-  <!-- CV Text -->
-  <text x="16" y="21" font-family="Arial, sans-serif" font-size="13" font-weight="800" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.5">CV</text>
+  <!-- CG Text -->
+  <text x="16" y="21" font-family="Arial, sans-serif" font-size="13" font-weight="800" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.5">CG</text>
 </svg>

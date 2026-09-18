@@ -92,9 +92,9 @@ function Navbar() {
         
         {/* Logo */}
         <NavLink to="/" className="navbar-logo" onClick={closeMenu}>
-          <span className="logo-box">CV</span>
+          <span className="logo-box">CG</span>
           <span className="logo-text">
-            Cours<span className="logo-accent">Vault</span>
+            Courses<span className="logo-accent">Guy</span>
           </span>
         </NavLink>
 

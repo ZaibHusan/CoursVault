@@ -55,7 +55,7 @@ export default function AdminLogin() {
 
     return (
         <div className="login-container">
-            {/* Ambient Background Elements tailored for CoursVault */}
+            {/* Ambient Background Elements tailored for CoursesGuy */}
             <div className="ambient-background" aria-hidden="true">
                 <div className="ambient-blob blob-primary" style={{ background: 'rgba(230, 57, 70, 0.15)' }}></div>
                 <div className="ambient-blob blob-secondary" style={{ background: 'rgba(255, 184, 0, 0.1)' }}></div>
@@ -72,7 +72,7 @@ export default function AdminLogin() {
                     <div className="brand-logo" style={{ color: '#E63946' }}>
                         <ShieldCheck size={32} />
                     </div>
-                    <h1 className="brand-title">CoursVault</h1>
+                    <h1 className="brand-title">CoursesGuy</h1>
                     <p className="brand-subtitle">Admin Command Center</p>
                 </motion.div>
 
@@ -120,7 +120,7 @@ export default function AdminLogin() {
                                     type="email"
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
-                                    placeholder="admin@coursvault.com"
+                                    placeholder="admin@coursesguy.com"
                                     required
                                     autoComplete="email"
                                     className="form-input"
