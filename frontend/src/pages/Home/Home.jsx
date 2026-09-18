@@ -47,17 +47,14 @@ export default function Home() {
       <section className="featured-section">
         <div className="container">
           <div className="section-header">
-            <span className="section-subtitle">
-              <Sparkles size={16} />
-              PREMIUM COURSES
-            </span>
-            <h2 className="section-title">
-              Get Top Courses at <span>Unbeatable Prices</span>
-            </h2>
-            <p className="section-desc">
-              Access world-class courses without breaking the bank
-            </p>
-          </div>
+  <h2 className="section-title">
+    Featured <span>Courses</span>
+  </h2>
+
+  <p className="section-desc">
+    Explore our most popular courses
+  </p>
+</div>
 
           {error && (
             <div className="error-banner">

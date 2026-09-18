@@ -1,77 +1,90 @@
-import React, { useState, useEffect } from 'react';
-import { Play, X, ShoppingCart, CreditCard, Download } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
+import { Play, X } from 'lucide-react';
 import './VideoTutorial.css';
 
 const VIDEO_ID = '3hDOD2V08NA';
-const THUMB = `https://img.youtube.com/vi/${VIDEO_ID}/maxresdefault.jpg`;
+
+const THUMB =
+  'https://res.cloudinary.com/fzfzhvkj/image/upload/v1789715731/ChatGPT_Image_Sep_18_2026_12_15_14_AM.png';
 
 export default function VideoTutorial() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
     document.body.style.overflow = open ? 'hidden' : '';
-    return () => { document.body.style.overflow = ''; };
+
+    return () => {
+      document.body.style.overflow = '';
+    };
   }, [open]);
 
   useEffect(() => {
-    const onKey = (e) => e.key === 'Escape' && setOpen(false);
-    window.addEventListener('keydown', onKey);
-    return () => window.removeEventListener('keydown', onKey);
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        setOpen(false);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
   }, []);
 
   return (
     <>
       <section className="vt-guide">
         <div className="vt-guide-inner">
-          {/* ---- Small preview card ---- */}
           <button
             type="button"
             className="vt-card"
             onClick={() => setOpen(true)}
-            aria-label="Watch how to buy a course"
+            aria-label="Watch how to use CoursesGuy"
           >
             <div className="vt-card-thumb">
-              <img src={THUMB} alt="" loading="lazy" />
-              <span className="vt-card-play">
-                <Play size={14} fill="currentColor" />
+              <img
+                src={THUMB}
+                alt="How to use CoursesGuy guide"
+                loading="lazy"
+              />
+
+              <div className="vt-card-overlay">
+                <span className="vt-card-play">
+                  <Play size={20} fill="currentColor" />
+                </span>
+              </div>
+
+              <span className="vt-card-duration">
+                0:58
               </span>
-              <span className="vt-card-duration">0:58</span>
             </div>
 
             <div className="vt-card-info">
-              <span className="vt-card-tag">
-                <span className="vt-live-dot" />
-                WEBSITE GUIDE
-              </span>
-              <strong className="vt-card-title">How To Buy Course</strong>
-              <span className="vt-card-sub">Watch the 60-second walkthrough</span>
+              <h2 className="vt-card-title">
+                How to use CoursesGuy
+              </h2>
+
+              <p className="vt-card-subtitle">
+                Watch the 60-sec guide
+              </p>
             </div>
           </button>
-
-          {/* ---- Steps ---- */}
-          <div className="vt-steps">
-            <div className="vt-step">
-              <ShoppingCart size={13} />
-              <span>Pick a course</span>
-            </div>
-            <span className="vt-arrow">→</span>
-            <div className="vt-step">
-              <CreditCard size={13} />
-              <span>Pay securely</span>
-            </div>
-            <span className="vt-arrow">→</span>
-            <div className="vt-step">
-              <Download size={13} />
-              <span>Instant access</span>
-            </div>
-          </div>
         </div>
       </section>
 
-      {/* ---- Dialog ---- */}
       {open && (
-        <div className="vt-overlay" onClick={() => setOpen(false)}>
-          <div className="vt-modal" onClick={(e) => e.stopPropagation()}>
+        <div
+          className="vt-overlay"
+          onClick={() => setOpen(false)}
+          role="dialog"
+          aria-modal="true"
+          aria-label="CoursesGuy video guide"
+        >
+          <div
+            className="vt-modal"
+            onClick={(e) => e.stopPropagation()}
+          >
             <button
               type="button"
               className="vt-close"
@@ -85,7 +98,7 @@ export default function VideoTutorial() {
               <iframe
                 className="vt-iframe"
                 src={`https://www.youtube.com/embed/${VIDEO_ID}?autoplay=1&rel=0&modestbranding=1&playsinline=1`}
-                title="How to buy a course"
+                title="How to use CoursesGuy"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
               />

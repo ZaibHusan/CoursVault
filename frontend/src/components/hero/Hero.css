@@ -59,7 +59,12 @@
     left: 0;
     right: 0;
     padding: 12px;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.5) 50%, transparent 100%);
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.9) 0%,
+        rgba(0, 0, 0, 0.5) 50%,
+        transparent 100%
+    );
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -133,7 +138,11 @@
     justify-content: space-between;
     align-items: center;
     padding: 0.7rem 0.9rem;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), transparent);
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.6),
+        transparent
+    );
     z-index: 10;
 }
 
@@ -288,7 +297,9 @@
 @media (max-width: 768px) {
     .hero {
         padding: 1.5rem 1rem;
-        min-height: 40vh;
+
+        /* FIX: removed forced 40vh height */
+        min-height: auto;
     }
 
     .hero__container {
@@ -315,16 +326,16 @@
         font-size: 0.6rem;
         padding: 0.4rem 0.8rem;
     }
-    
+
     .hero__slide-title {
         font-size: 10px;
         max-width: 100px;
     }
-    
+
     .hero__slide-price {
         font-size: 11px;
     }
-    
+
     .hero__slide-link {
         font-size: 7px;
         padding: 3px 6px;
@@ -334,7 +345,7 @@
 /* Mobile */
 @media (max-width: 480px) {
     .hero {
-        padding: 1.5rem 0.5rem;
+        padding: 2rem 0.5rem;
     }
 
     .hero__container {
@@ -373,39 +384,39 @@
         width: 12px;
         height: 12px;
     }
-    
+
     .hero__brand {
         font-size: 0.5rem;
     }
-    
+
     .hero__brand-badge {
         font-size: 0.4rem;
     }
-    
+
     .hero__premium {
         font-size: 0.4rem;
         padding: 0.15rem 0.4rem;
     }
-    
+
     .hero__slide-info {
         padding: 8px;
         gap: 6px;
     }
-    
+
     .hero__slide-title {
         font-size: 10px;
         max-width: 100px;
     }
-    
+
     .hero__slide-price {
         font-size: 11px;
     }
-    
+
     .hero__slide-discount {
         font-size: 7px;
         padding: 1px 4px;
     }
-    
+
     .hero__slide-link {
         font-size: 7px;
         padding: 3px 6px;
@@ -417,7 +428,7 @@
     .hero {
         padding: 1rem 0.5rem;
     }
-    
+
     .hero__slider-frame {
         height: 120px;
     }
@@ -434,29 +445,29 @@
         font-size: 0.45rem;
         padding: 0.25rem 0.5rem;
     }
-    
+
     .hero__brand {
         font-size: 0.45rem;
     }
-    
+
     .hero__brand-badge {
         font-size: 0.35rem;
     }
-    
+
     .hero__premium {
         font-size: 0.35rem;
         padding: 0.1rem 0.3rem;
     }
-    
+
     .hero__slide-title {
         font-size: 9px;
         max-width: 80px;
     }
-    
+
     .hero__slide-price {
         font-size: 10px;
     }
-    
+
     .hero__slide-link {
         font-size: 6px;
         padding: 2px 4px;
