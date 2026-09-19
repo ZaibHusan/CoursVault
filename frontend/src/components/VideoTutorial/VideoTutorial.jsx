@@ -2,10 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { Play, X } from 'lucide-react';
 import './VideoTutorial.css';
 
-const VIDEO_ID = '3hDOD2V08NA';
-
 const THUMB =
   'https://res.cloudinary.com/fzfzhvkj/image/upload/v1789715731/ChatGPT_Image_Sep_18_2026_12_15_14_AM.png';
+
+const VIDEO_URL =
+  'https://player.cloudinary.com/embed/?cloud_name=fzfzhvkj&public_id=Website_Guide';
 
 export default function VideoTutorial() {
   const [open, setOpen] = useState(false);
@@ -45,13 +46,16 @@ export default function VideoTutorial() {
             <div className="vt-card-thumb">
               <img
                 src={THUMB}
-                alt="How to use CoursesGuy guide"
+                alt="How to use CoursesGuy"
                 loading="lazy"
               />
 
               <div className="vt-card-overlay">
                 <span className="vt-card-play">
-                  <Play size={20} fill="currentColor" />
+                  <Play
+                    size={20}
+                    fill="currentColor"
+                  />
                 </span>
               </div>
 
@@ -91,16 +95,20 @@ export default function VideoTutorial() {
               onClick={() => setOpen(false)}
               aria-label="Close video"
             >
-              <X size={18} strokeWidth={2.5} />
+              <X
+                size={18}
+                strokeWidth={2.5}
+              />
             </button>
 
             <div className="vt-frame">
               <iframe
                 className="vt-iframe"
-                src={`https://www.youtube.com/embed/${VIDEO_ID}?autoplay=1&rel=0&modestbranding=1&playsinline=1`}
-                title="How to use CoursesGuy"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                src={VIDEO_URL}
+                title="CoursesGuy Website Guide"
+                allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
                 allowFullScreen
+                frameBorder="0"
               />
             </div>
           </div>
